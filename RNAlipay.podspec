@@ -15,29 +15,20 @@ Pod::Spec.new do |s|
   s.author       = { package["author"]["name"] => package["author"]["email"] }
   # optional - use expanded license entry instead:
   # s.license    = { :type => "MIT", :file => "LICENSE" }
-  s.platforms    = { :ios => "9.0" }
+  s.platforms    = { :ios => "10.0" }
   s.source       = { :git => "https://github.com/gavin1995/react-native-alipay.git", :tag => "#{s.version}" }
 
-  s.source_files = "**/*.{h,c,m,swift}"
+  s.source_files = "ios/**/*.{h,c,m,swift}"
   # s.source_files = "**/*.{h,m}"
   s.requires_arc = true
 
-  s.frameworks = "UIKit",
-  s.frameworks = "Foundation",
-  s.frameworks = "CFNetwork",
-  s.frameworks = "SystemConfiguration",
-  s.frameworks = "QuartzCore",
-  s.frameworks = "CoreGraphics",
-  s.frameworks = "CoreMotion",
-  s.frameworks = "CoreTelephony",
-  s.frameworks = "CoreText",
-  s.frameworks = "WebKit"
+  s.frameworks = "UIKit","Foundation","CFNetwork","SystemConfiguration","QuartzCore","CoreGraphics","CoreMotion","CoreTelephony","CoreText","WebKit"
 
-  s.dependency "React"
+  s.dependency "React-Core"
   s.resource = 'AlipaySDK.bundle'
   # s.source_files  = "AlipaySDKiOS/AlipaySDK.framework/**/*"
-  s.vendored_frameworks = 'AlipaySDK.framework'
-  s.library = "c++", "z"
+  s.vendored_frameworks = 'ios/AlipaySDK.framework'
+  s.libraries = "c++","z","c++abi","icucore"
   # ...
   # s.dependency "..."
 end
