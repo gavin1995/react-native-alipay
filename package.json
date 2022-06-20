@@ -31,10 +31,8 @@
     "ios",
     "android"
   ],
-  "author": {
-    "name": "Kenny Wong",
-    "email": "wowohoo@qq.com"
-  },
+  "homepage": "https://github.com/uiwjs/react-native-alipay",
+  "author": "Kenny Wong",
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
