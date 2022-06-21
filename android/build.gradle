@@ -78,12 +78,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'
-    implementation fileTree(dir: 'alipaysdk-android', include: ['*.aar', '*.jar'], exclude: [])
-    // From node_modules
-
-    // 支付宝 SDK AAR 包所需的配置
-//     implementation (name: 'alipaysdk-noutdid-15.8.06.211122165332', ext: 'aar')
-//    compileOnly fileTree(dir: "libs", include: ["*.aar"])
+    implementation files('libs/alipaysdk-noutdid-15.8.06.211122165332.aar')
 }
 
 def configureReactNativePom(def pom) {
